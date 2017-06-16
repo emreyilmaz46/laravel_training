@@ -80,7 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel Training
-                    Emre Branch
+                    Emre Branch mustafa branch
                 </div>
 
             </div>
