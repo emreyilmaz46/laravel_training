@@ -24,4 +24,10 @@ class PostController extends Controller
 
         return view('emre.blog.index', compact('iletiler'));
     }
+    public function tekgoster($id)
+    {
+        $tekilpost= Post::find($id);
+
+        return view('emre.blog.tekilblog', compact('tekilpost'));
+    }
 }

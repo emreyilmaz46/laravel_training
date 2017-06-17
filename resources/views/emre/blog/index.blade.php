@@ -36,10 +36,10 @@ li {
 <ol>
     @foreach($iletiler as $ileti)
     <li>
-        <div id="baslik">
+        <a href="{!! url("/emre/blog/{$ileti->id}") !!}"><div id="baslik">
             <p><strong>Başlık: </strong>{{ $ileti->baslik }} </p>
             <p> <em>{{$ileti->created_at->diffForHumans()}}</p></em>
-        </div>
+        </div> </a>
         <div id="icerik">
         <p><strong>İçerik: </strong>{{ $ileti->icerik }}</p>
         </div>
