@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/emre', function () {
     return view('emre.index');
 });
+
+Route::get('/emre/blog/ekle', 'PostController@ekle');
+Route::get('/emre/blog/kaydet','PostController@kaydet');
+Route::get('/emre/blog', 'PostController@goster');
