@@ -20,9 +20,10 @@ Route::get('/emre', function () {
 });
 
 Route::get('/emre/blog/ekle', 'PostController@ekle');
+
 Route::post('/emre/blog','PostController@kaydet');
 Route::get('/emre/blog', 'PostController@goster');
 
 Route::get('/emre/blog/{id}', 'PostController@tekgoster');
-Route::post('/emre/blog/{id}', 'CommentController@kaydet');
+Route::post('/emre/blog/{post}', 'CommentController@kaydet');
 

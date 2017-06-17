@@ -42,7 +42,7 @@
     #yorumdiv{
         margin: auto;
         padding: 3px;
-        display: block;
+        display: none;
         background-color: white;
         border: 3px solid black;
         width: 40%;
@@ -51,6 +51,22 @@
             padding: 5px;
             margin: 5px;
         }
+    #yorumgoster {
+        margin: auto;
+        width: 40%;
+        display: block;
+        background-color: lightslategrey;
+        color: white;
+        border: 2px solid grey;
+        padding: 1px;
+    }
+    li {
+        margin: 5px auto;
+        display: block;
+        width: 98%;
+        background-color: black;
+        padding: 4px;
+    }
     </style>
 </head>
 <body>
@@ -67,23 +83,40 @@
         <a href="/emre/blog/"><button id="tumgorbtn">Tüm İletileri Gör</button></a>
         <button id="yorumbtn">Yorum Ekle</button>
     </section>
-</div> <br><br>
+</div>
+<br><br>
+<hr>
+<br><br>
 <div id="yorumdiv">
-    <form action="/emre/blog/{id}" method="POST">
+    <form action="{!! url("/emre/blog/{$tekilpost->id}") !!}" method="POST">
         {{csrf_field()}}
         <textarea placeholder="Yorumunuzu buraya giriniz" name="icerik" cols="65" rows="5"></textarea>
         <br><br><input type="submit" value="Kaydet">
     </form>
 
 </div>
+
+<br>
+<?// TODO: Buraya eğer hiçbir comment yoksa yorumgoster div'ini göstermeme şartı eklenecek?>
+<div id="yorumgoster">
+    <ol>
+    @foreach($tekilpost->comments as $comment)
+        <li>
+            <strong> {{ $comment->icerik }} </strong> ||
+            <em> {{ $comment->created_at->diffForHumans() }} </em>
+        </li>
+    @endforeach
+    </ol>
+</div>
+
 <script>
 
     $(document).ready(function(){
 
-       $('#yorumdiv').slideUp();
+       //$('#yorumdiv').slideUp();
 
         var but = $('#yorumbtn').click(function() {
-            $('#yorumdiv').slideToggle();
+            $('#yorumdiv').slideDown();
         });
 
     });

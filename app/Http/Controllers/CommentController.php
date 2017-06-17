@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comment;
+use App\Post;
 class CommentController extends Controller
 {
-    public function kaydet()
+    public function kaydet(Post $post)
     {
-        $yorum = new Comment();
-        $yorum->icerik = Request('icerik');
-        $yorum->save();
-        return redirect('/emre/blog/');
-        //dd(Request('icerik'));
+        $post->comments()->create(['icerik'=>request('icerik')]);
+
+        return back();
     }
 }
