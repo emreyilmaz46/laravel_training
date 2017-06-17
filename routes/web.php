@@ -20,5 +20,5 @@ Route::get('/emre', function () {
 });
 
 Route::get('/emre/blog/ekle', 'PostController@ekle');
-Route::get('/emre/blog/kaydet','PostController@kaydet');
+Route::post('/emre/blog','PostController@kaydet');
 Route::get('/emre/blog', 'PostController@goster');

@@ -27,8 +27,9 @@ div {
 <nav><p> Yeni bir ileti ekleyin:</p></nav>
 
 <div>
-    {{csrf_field()}}
-    <form action="/emre/blog/kaydet">
+
+    <form action="/emre/blog" method="POST">
+        {{csrf_field()}}
         <input type="text" name="baslik" placeholder="İeti Başlığı Giriniz">
         <textarea name="icerik" placeholder="İçerik giriniz" rows="5" cols="30"></textarea>
         <input type="submit" value="Kaydet">
