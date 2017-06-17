@@ -24,3 +24,5 @@ Route::post('/emre/blog','PostController@kaydet');
 Route::get('/emre/blog', 'PostController@goster');
 
 Route::get('/emre/blog/{id}', 'PostController@tekgoster');
+Route::post('/emre/blog/{id}', 'CommentController@kaydet');
+
