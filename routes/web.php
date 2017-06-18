@@ -27,3 +27,11 @@ Route::get('/emre/blog', 'PostController@goster');
 Route::get('/emre/blog/{id}', 'PostController@tekgoster');
 Route::post('/emre/blog/{post}', 'CommentController@kaydet');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+Route::get('/about', 'HomeController@about');
+
+Route::resource('customer','CustomerController');
+Route::get('customer/destroy/{id}','CustomerController@destroy');
