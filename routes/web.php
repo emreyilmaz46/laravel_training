@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about');
+
+Route::resource('customer', 'CustomerController');
+Route::get('customer/delete/{id}', 'CustomerController@destroy');

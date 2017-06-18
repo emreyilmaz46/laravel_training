@@ -38,6 +38,7 @@
                     <ul class="nav navbar-nav">
                         &nbsp;<li><a href="{{url('home')}}">Home</a></li>
                          <li><a href="{{url('about')}}">About</a></li>
+                         <li><a href="{{url('customer')}}">Customers</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
