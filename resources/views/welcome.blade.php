@@ -79,8 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel Training
-                    Emre Branch mustafa branch
+                    Laravel Training</br>Emre YILMAZ Branch</br>Mustafa DOĞAN Branch
                 </div>
 
             </div>
