@@ -7,7 +7,6 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading"> Müşteri Bilgisi Güncelle </div>
-
                     <div class="panel-body">
                         @include('partials.notification')
                         <form class="form-horizontal" action="{{route('customer.update', $customer->id)}}" method="POST">
