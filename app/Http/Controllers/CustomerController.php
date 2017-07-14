@@ -17,7 +17,6 @@ class CustomerController extends Controller
 
         return view('customers.index')->with(compact('customers'));
     }
-
     public function create(){
 
         return view ('customers.create');
@@ -58,6 +57,4 @@ class CustomerController extends Controller
 
         return back()->withSuccess('Customer updated successfully!');
     }
-
-
 }

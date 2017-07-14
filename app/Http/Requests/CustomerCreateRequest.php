@@ -24,8 +24,8 @@ class CustomerCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required|min:5',
-            'company' => 'required|min:5'
+            'name'=> 'required|min:2',
+            'company' => 'required|min:3'
         ];
     }
 }
