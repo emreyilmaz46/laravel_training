@@ -38,6 +38,7 @@
                     <ul class="nav navbar-nav">
                         <li> <a href="{{url('home')}}">Home</a></li>
                         <li> <a href="{{url('customer')}}">Customers</a></li>
+                        <li> <a href="{{url('survey_questions')}}">Anket Soruları</a></li>
                         <li> <a href="{{url('about')}}">About</a></li>
                     </ul>
 

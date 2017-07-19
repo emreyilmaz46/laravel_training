@@ -22,3 +22,5 @@ Route::get('/about', 'HomeController@about');
 
 Route::resource('customer','CustomerController');
 Route::get('customer/delete/{id}','CustomerController@destroy');
+
+Route::resource('survey_questions','SurveyQuestionController');
