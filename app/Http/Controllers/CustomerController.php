@@ -11,12 +11,11 @@ class CustomerController extends Controller
 {
     public function index(){
         //$customers = Customer::get(); //SİLME.Bunu kapatarak paginate ile getiriyoruz ekrana.
-        $customers = Customer::orderBy('name','DESC')->paginate(3);
-
+        $customers = Customer::orderBy('id','ASC')->paginate(3);
         //dd($customers);
-
         return view('customers.index')->with(compact('customers'));
     }
+
     public function create(){
 
         return view ('customers.create');

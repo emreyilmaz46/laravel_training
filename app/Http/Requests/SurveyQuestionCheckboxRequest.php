@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SurveyQuestionCreateRequest extends FormRequest
+class SurveyQuestionCheckboxRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class SurveyQuestionCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,9 +24,7 @@ class SurveyQuestionCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'question_id'=> 'required|min:1',
-            'question' => 'required|min:10',
-            'part'=> 'required|min:1'
+            //
         ];
     }
 }

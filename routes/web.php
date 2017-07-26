@@ -24,3 +24,4 @@ Route::resource('customer','CustomerController');
 Route::get('customer/delete/{id}','CustomerController@destroy');
 
 Route::resource('survey_questions','SurveyQuestionController');
+//Route::get('survey_questions','SurveyQuestionController@index_R');
