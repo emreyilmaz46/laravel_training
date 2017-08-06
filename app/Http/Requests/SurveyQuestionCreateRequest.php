@@ -24,8 +24,8 @@ class SurveyQuestionCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'question_id'=> 'required|min:1',
             'question' => 'required|min:10',
+            'type'=> 'required|min:1',
             'part'=> 'required|min:1'
         ];
     }

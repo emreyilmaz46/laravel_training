@@ -24,4 +24,9 @@ Route::resource('customer','CustomerController');
 Route::get('customer/delete/{id}','CustomerController@destroy');
 
 Route::resource('survey_questions','SurveyQuestionController');
-//Route::get('survey_questions','SurveyQuestionController@index_R');
+Route::get('survey_questions.survey','SurveyQuestionController@survey');
+Route::get('survey_answers.showOne','SurveyAnswerController@showOne');
+Route::get('survey_answers.showAll','SurveyAnswerController@showAll');
+Route::get('survey_answers.showAnswerTable','SurveyAnswerController@showAnswerTable');
+
+Route::post('survey/answer','SurveyAnswerController@store');

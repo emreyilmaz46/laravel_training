@@ -18,16 +18,16 @@
 
                             {{csrf_field()}}
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="question_id">Question Id:</label>
+                                <label class="control-label col-sm-2" for="question">Question:</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="question_id" placeholder="Enter question Id" name="question_id" value="{{$survey_questions->question_id}}">
+                                    <input type="text" class="form-control" id="question" placeholder="Enter question" name="question" value="{{$survey_questions->question}}">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-sm-2" for="question">Question:</label>
+                                <label class="control-label col-sm-2" for="question">Type:</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="question" placeholder="Enter question" name="question" value="{{$survey_questions->question}}">
+                                    <input type="text" class="form-control" id="type" placeholder="Enter type" name="type" value="{{$survey_questions->type}}">
                                 </div>
                             </div>
 

@@ -11,7 +11,8 @@ class CustomerController extends Controller
 {
     public function index(){
         //$customers = Customer::get(); //SİLME.Bunu kapatarak paginate ile getiriyoruz ekrana.
-        $customers = Customer::orderBy('id','ASC')->paginate(3);
+        //$customers = Customer::get()->where('id','>',2);
+        $customers = Customer::orderBy('id','ASC')->paginate(5);
         //dd($customers);
         return view('customers.index')->with(compact('customers'));
     }
