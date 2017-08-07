@@ -8,4 +8,9 @@ class SurveyQuestion extends Model
 {
     protected $table = 'survey_questions';
     protected $guarded = [];
+
+    public function answers()
+    {
+        return $this->hasMany(SurveyAnswer::class, 'question_id', 'id');
+    }
 }

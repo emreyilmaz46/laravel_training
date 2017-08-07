@@ -12,16 +12,23 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>stu_id</th>
-                            <td>{{$stu}}</td>
-                            <p>{{ $stu }}</p>
+                            <th>Skor R</th>
+                            <th>Skor I</th>
+                            <th>Skor A</th>
+                            <th>Skor S</th>
+                            <th>Skor E</th>
+                            <th>Skor C</th>
+                            <th>Toplam Skor</th>
                         </tr>
                         </thead>
                         <tbody>
-
-
-
+                            <td>{{$R}}</td>
+                            <td>{{$I}}</td>
+                            <td>{{$A}}</td>
+                            <td>{{$S}}</td>
+                            <td>{{$E}}</td>
+                            <td>{{$C}}</td>
+                            <td>{{$sum}}</td>
                         </tbody>
                     </table>
                 </div>
