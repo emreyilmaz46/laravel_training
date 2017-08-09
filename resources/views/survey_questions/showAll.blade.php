@@ -25,12 +25,12 @@
                         @foreach($students as $student)
                             <tr>
                                 <td>{{$student->id}}</td>
-                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[1,18])->get()->count()}}</td>
-                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[19,36])->get()->count()}}</td>
-                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[37,54])->get()->count()}}</td>
-                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[55,72])->get()->count()}}</td>
-                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[73,90])->get()->count()}}</td>
-                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[91,108])->get()->count()}}</td>
+                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[1,10])->get()->count()}}</td>
+                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[11,20])->get()->count()}}</td>
+                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[21,30])->get()->count()}}</td>
+                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[31,40])->get()->count()}}</td>
+                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[41,50])->get()->count()}}</td>
+                                <td>{{$student->answers()->where('answer',1)->whereBetween('question_id',[51,60])->get()->count()}}</td>
                             </tr>
                         @endforeach
                         </tbody>
